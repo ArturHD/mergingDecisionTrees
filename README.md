@@ -8,6 +8,7 @@ As of February 2021, this code might need some refactoring and changes to work w
 
 # How to cite
 Please cite this work as follows:
+```latex
 @inproceedings{DBLP:conf/cidm/AndrzejakLZ13,
   author    = {Artur Andrzejak and
                Felix Langner and
@@ -25,4 +26,4 @@ Please cite this work as follows:
   biburl    = {https://dblp.org/rec/conf/cidm/AndrzejakLZ13.bib},
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }
-
+```
