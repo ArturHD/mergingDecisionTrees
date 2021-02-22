@@ -1,0 +1,129 @@
+import cubes.ClassCube
+import cubes.Cube
+
+def cubeA1 = new ClassCube(2)
+cubeA1.with {
+    setClassValue(1.1f)
+    setConfidence(0.5f)
+    setBounds(0, 0, 1)
+    setBounds(1, 0, 1)
+}
+
+def cubeA3 = new ClassCube(2)
+cubeA3.with {
+    setClassValue(2.1f)
+    setBounds(0, 1, 2)
+    setBounds(1, 0, 1)
+}
+
+def cubeB1 = new ClassCube(2)
+cubeB1.with {
+    setClassValue(2.1f)
+    setConfidence(0.9f)
+    setBounds(0, 0.5f, 1.5f)
+    setBounds(1, 0.5f, 1.5f)
+}
+
+def cubeA1B1Intersection = new ClassCube(2)
+cubeA1B1Intersection.with {
+    setClassValue(2.1f)
+    setConfidence(0.5f)     // result is minimum of A1.confidence and B1.confidence
+    setBounds(0, 0.5f, 1)
+    setBounds(1, 0.5f, 1)
+    classData.hasConflict = true
+}
+
+def cubeA3B1Intersection = new ClassCube(2)
+cubeA3B1Intersection.with {
+    setClassValue(2.1f)
+    setBounds(0, 1, 1.5)
+    setBounds(1, 0.5f, 1)
+}
+
+testCubeIdentity {
+    def a1 = new Cube(2)
+    def a2 = new Cube(2)
+    def a3 = new Cube(2)
+    a3.setUpper(1, 1.0)
+    assertEquals a1, a2
+    assertEquals a1.hashCode(), a2.hashCode()
+    assert a1 != a3
+    assert a1.hashCode() != a3.hashCode()
+    assertEquals cubeA1, cubeA1.clone()
+}
+
+testClassCubeIdentity {
+    def a1 = new ClassCube(2)
+    a1.with {
+        setClassValue(1.0)
+        setUpper(1, 1.0)
+    }
+    def a2 = a1.clone()
+    def a3 = a1.clone()
+    a3.setClassValue(2.0)
+
+    assertEquals a1, a2
+    assertEquals a1.hashCode(), a2.hashCode()
+    assert a1 != a3
+    assert a1.hashCode() != a3.hashCode()
+
+    assert a1.geometryEquals(a3)
+    assert a1.geometryHashCode() == a3.geometryHashCode()
+}
+
+testIntersectionIdentity {
+    assertEquals(cubeA1, cubeA1.getIntersection(cubeA1),)
+    assertEquals(cubeA1B1Intersection, cubeA1B1Intersection.getIntersection(cubeA1B1Intersection))
+}
+
+testNonIntersectin {
+    assertEquals(null, cubeA1.getIntersection(cubeA3))
+}
+testSimpleBoundedConflictingClassesIntersection {
+    assertEquals(cubeA1B1Intersection, cubeA1.getIntersection(cubeB1))
+    assertEquals(cubeA1B1Intersection, cubeB1.getIntersection(cubeA1))
+    assertEquals(cubeA1B1Intersection, cubeB1.getIntersection(cubeA1B1Intersection))
+}
+
+testSimpleBoundedEqualClassesIntersection {
+    assertEquals(cubeA3B1Intersection, cubeA3.getIntersection(cubeB1))
+    assertEquals(cubeA3B1Intersection, cubeB1.getIntersection(cubeA3))
+}
+
+testMinusSpecialCases {
+    assertEquals([] as Set, cubeA1.minusFromOtherCube(cubeA1))
+    assertEquals([cubeA1] as Set, cubeA1.minusFromOtherCube(cubeA3))
+}
+/*
+
+testMinus {
+    def intersectionA1B1 = cubeA1.getIntersection(cubeB1)
+    def A1MinusB1 = cubeA1.minusFromIntersection(intersectionA1B1)
+
+    assertEquals(2, A1MinusB1.size())
+
+    A1MinusB1.each { // Each result box should
+        assertEquals(it, cubeA1.getIntersection(it)) //  be fully in A1
+        assertEquals(null, cubeB1.getIntersection(it)) // not intersect B1
+    }
+}
+
+testCollide {
+    def collision = cubeA1.collide(cubeB1)
+    def A1MinusB1 = collision.first
+    def A1intersectB1 = collision.second
+    def B1MinusA1 = collision.third
+
+    assertEquals(2, A1MinusB1.size())
+    assertEquals(2, B1MinusA1.size())
+
+    A1MinusB1.each { // Each result box should
+        assertEquals(it, cubeA1.getIntersection(it)) //  be fully in A1
+        assertEquals(null, cubeB1.getIntersection(it)) // not intersect B1
+    }
+
+    B1MinusA1.each { // Each result box should
+        assertEquals(it, cubeB1.getIntersection(it)) //  be fully in B1
+        assertEquals(null, cubeA1.getIntersection(it)) // not intersect B1
+    }
+}*/

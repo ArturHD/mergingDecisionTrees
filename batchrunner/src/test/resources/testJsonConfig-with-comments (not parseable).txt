@@ -1,0 +1,95 @@
+{
+// Specification of input arguments and output values
+"ParamInfos": {
+    // name of the 1st parameter is traceIndex
+    "traceIndex": {
+        "active" : 1,	// if 0, skip it
+        "fnAbr": "tr",	// abbreviation of the parameter name in the filename for the serialized experiment results (see saveToFile in ExperimentResult)
+        // flags are (in this order):
+        //	isInputParameter (1) or output (0), 
+        //	putInSummary: 1 means put the value into the summary line (see appendToSummary in ExperimentResult)
+        //	saveValue: 1 means: serialize and save the ExperimentResult after experiment (in saveToFile in ExperimentResult
+        //	putInFileName: 1 means: put value into the file name of the serialized ExperimentResult
+        "flags": [1,1,1,1], 
+        "init" : 0, // initial value
+        "condition" : "x.targetColumnIndex != 13", // traceIndex will not be set to values other than the initial value
+                                                   // if the condition evaluates to false. x is the ExperimentResult,
+                                                   // the condition must be an arbitrary Groovy script evaluating to a
+                                                   // boolean value or not be present
+        "doc" : "Index of the input trace"	// documentation, can span multiple lines (Json does not allow comments)
+    },
+    "targetColumnIndex": {
+        "active" : 1,
+        "fnAbr": "target",
+        "flags": [1,1,1,1],
+        "init" : 1,
+        "doc" : "Index of trace col to be predicted"
+    },
+    "preprocType": {
+        "active" : 1,
+        "fnAbr": "pproc",
+        "flags": [1,1,1,1],
+        "init" : 1,
+        "doc" : "Type of the preprocessor"
+    },
+    "Output_pctCorrect": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The percentage of instances correctly classified"
+    },
+    "Output_pctIncorrect": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The percentage of instances incorrectly classified"
+    }
+},
+
+ // for some selected parameters defines lists or ranges of values to be iterated upon 
+"Loops": {
+    "traceIndex": {
+        "test": [0,1,2,3],  	// a list of values
+        "const": 0,  		// a constant
+        "test2": {"list": [0, 1, 2, 3]}, // alternative list representation
+        "all": {"range": [0, 40]}	// range: from 0 to 40 (including 40), step is 1
+        "allDouble": {"range": [0.5, 42, 0.5]}	// range: from 0 to 42 (including 40), step is 0.5
+    },
+    "targetColumnIndex": {
+        "all": { "range": [0, 50, 1] }
+        "blabla": { "range": [0, 150] }
+
+    }
+},
+
+
+"Batches": {
+    // a named batch experiment
+    "basicBatch" : {
+        "doc" : "We do what it takes",	// documentation
+        "ExperimentCodeClass" : "batchRunner.ExperimentCodeTest",   // class implementing ExperimentCode.java 
+        "filterClass" : "",		// optional filter (leave out or set to "")
+        "settings" : { "bla": 0 },	// to be used by own ExperimentCode implementation, passed in "init"
+        // the following is a specification of "loop combination". Iteration takes place over the
+        // Carthesian product of the "per-parameter-loops" defined above
+         "loopsCombination": {
+            "traceIndex": "all",
+            "targetColumnIndex": "all"
+         }
+    },
+    // another batch experiment definition
+    "batchExperiment2" : {
+	    "doc" : "We do what it takes",	// documentation
+	    "ExperimentCodeClass" : "batchRunner.ExperimentCodeTest",   // class implementing ExperimentCode.java 
+	    "filterClass" : "",		// optional filter (leave out or set to "")
+	    "settings" : { "bla": 0 },	// to be used by own ExperimentCode implementation, passed in "init"
+	     "loopsCombination": {
+		"traceIndex": "allDouble",
+		"targetColumnIndex": "blabla"
+	     }
+	}
+
+}
+}

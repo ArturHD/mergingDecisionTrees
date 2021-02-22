@@ -1,0 +1,66 @@
+import cubes.ClassCube
+import cubes.Cube
+import cubes.CubeIntersectionFinder
+
+def cubeA1 = new ClassCube(2)
+cubeA1.setClassValue(1.1f)
+cubeA1.setBounds(0, 0, 1)
+cubeA1.setBounds(1, 0, 1)
+
+def cubeA2 = new ClassCube(2)
+cubeA2.setClassValue(1.2f)
+cubeA2.setBounds(0, 1, 2)
+cubeA2.setBounds(1, 2, 3)
+
+def cubeA3 = new ClassCube(2)
+cubeA3.setClassValue(1.3f)
+cubeA3.setBounds(0, 1, 2)
+cubeA3.setBounds(1, 0, 1)
+
+def cubeA4 = new ClassCube(2)
+cubeA4.setClassValue(1.4f)
+cubeA4.setUpper(0, 1)
+
+def cubeB1 = new ClassCube(2)
+cubeB1.setClassValue(2.1f)
+cubeB1.setBounds(0, 0.5f, 1.5f)
+cubeB1.setBounds(1, 0.5f, 1.5f)
+
+def cubeB2 = new ClassCube(2)
+cubeB2.setClassValue(2.2f)
+cubeB2.setBounds(0, 1.5f, 2.5f)
+cubeB2.setBounds(1, 0.5f, 1.5f)
+
+def cubeB3 = new ClassCube(2)
+cubeB3.setClassValue(2.3f)
+cubeB3.setLower(1, 1.5f)
+
+def cubeB4 = new ClassCube(2)
+cubeB4.setClassValue(2.4f)
+cubeB4.setLower(0, 1)
+
+testBoundedIntersections {
+    def intersections = new CubeIntersectionFinder().findIntersections([cubeA1, cubeA2, cubeA3] as Set, [cubeB1, cubeB2] as Set)
+    assert intersections == [new Pair<Cube, Cube>(cubeA1, cubeB1), new Pair<Cube, Cube>(cubeA3, cubeB1), new Pair<Cube, Cube>(cubeA3, cubeB2)] as Set
+}
+
+testUnboundedIntersections {
+    def intersections = new CubeIntersectionFinder().findIntersections([cubeA4] as Set, [cubeB3] as Set)
+    assert intersections == [new Pair<Cube, Cube>(cubeA4, cubeB3)] as Set
+}
+
+testComplexIntersections {
+    def intersections = new CubeIntersectionFinder().findIntersections([cubeA1, cubeA2, cubeA3, cubeA4] as Set, [cubeB1, cubeB2, cubeB3] as Set)
+    assert intersections == [new Pair<Cube, Cube>(cubeA1, cubeB1), new Pair<Cube, Cube>(cubeA3, cubeB1), new Pair<Cube, Cube>(cubeA3, cubeB2), new Pair<Cube, Cube>(cubeA4, cubeB3), new Pair<Cube, Cube>(cubeA4, cubeB1), new Pair<Cube, Cube>(cubeA2, cubeB3)] as Set
+}
+
+testAdjacentCubes {
+    // two adjacent cubes should not intersect
+    assert new CubeIntersectionFinder().findIntersections([cubeA1] as Set, [cubeA3] as Set) == [] as Set
+    assert new CubeIntersectionFinder().findIntersections([cubeA3] as Set, [cubeA1] as Set) == [] as Set
+}
+
+testUnboundedAdjacnentIntersections {
+    // two adjacent cubes with unbounded dimensions should not intersect
+    assert new CubeIntersectionFinder().findIntersections([cubeA4] as Set, [cubeB4] as Set) == [] as Set
+}

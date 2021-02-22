@@ -1,0 +1,1079 @@
+{
+"ParamInfos": {
+    "dataset": {
+        "active" : 1,
+        "fnAbr": "ds",
+        "flags": [1,1,1,1],
+        "init" : 0,
+        "doc" : "Name of the input dataset"
+    },
+    "Ek": {
+        "active" : 1,
+        "fnAbr": "Ek",
+        "flags": [1,1,1,1],
+        "init" : 1,
+        "condition": "Integer.bitCount(x.Ek) == 1 && (x.treeType == \"tc\" || x.treeType == \"mtc\" || x.treeType == \"fcc\" || x.treeType == \"cd\" || x.treeType == \"opc\" || x.treeType == \"vc\" || x.treeType == \"rsc\")",
+        "doc" : "Number of sub-datasets into which training set is split"
+    },
+    "treeType": {
+        "active": 1,
+        "fnAbr": "tree",
+        "flags": [1,1,1,1],
+        "init": "J48",
+        "doc": "Algorithm to build the classifier (this is the most important parameter!)"
+    },
+    "Pdisc": {
+        "active" : 1,
+        "fnAbr": "Pdisc",
+        "flags": [1,1,1,1],
+        "init": "0",
+        "doc" : "Discretize the input dataset (0= no discretization, 1 = unsupervised, 2 = supervised, -10 = global discretisation (prior to split))"
+    },
+    "NumFolds": {
+        "active": 1,
+        "fnAbr": "nFold",
+        "flags": [1,1,1,1],
+        "init" : "10",
+        "doc" : "Number of folds in cross valuation"
+    },
+    "Ncentro": {
+        "active" : 1,
+        "fnAbr": "N",
+        "flags": [1,1,1,1],
+        "init" : 1,
+        "condition": "x.treeType == \"opc\" || x.treeType == \"vc\" || x.treeType == \"rsc\"",
+        "doc" : "Number of samples (or centroids) allowed per DatasetSummary (in one-pass-classier, opc); if <= 1.0, than expressed as a fraction of the #training instances."
+    },
+    "MS": {
+        "active" : 1,
+        "fnAbr": "MS",
+        "flags": [1,1,1,1],
+        "init" : 1,
+        "condition": "x.treeType == \"opc\"",
+        "doc" : "Strategy for merging the DatasetSummaries (in one-pass-classier, opc)."
+    },
+    "SumStra": {
+        "active" : 1,
+        "fnAbr": "SumStra",
+        "flags": [1,1,1,1],
+        "init" : 1,
+        "condition": "x.treeType == \"opc\"",
+        "doc" : "Strategy for summarizing samples to centroids (in one-pass-classier, opc)."
+    },
+    "FinalClassif": {
+        "active": 1,
+        "fnAbr": "finClas",
+        "flags": [1,1,1,1],
+        "init" : "J48",
+        "condition": "x.treeType == \"opc\" || x.treeType == \"vc\"",
+        "doc" : "Final classifier for voting and summarising (opc) classifiers"
+    },
+    "Pconf": {
+        "active": 1,
+        "fnAbr": "Pconf",
+        "flags": [1,1,1,1],
+        "init" : "a",
+        "condition" : "x.treeType == \"mtc\"",
+        "doc" : "mtc: Conflict resolution strategies for boxes which are intersections of parents with different classes"
+    },
+    "Pprun": {
+            "active": 1,
+            "fnAbr": "Pprun",
+            "flags": [1,1,1,1],
+            "init" : "30",
+            "condition": "x.treeType == \"mtc\" && x.Ek > 1",
+            "doc" : "mtc: Pruning in the MTC. 0=No pruning, 1=keep branches w/o test instances, 2=prune branches w/o test instances,
+                    >9=ranked-boxes pruning: (see trees.RankedBoxesPruning.filterBoxes)
+                    10=keep ANY PprunMaxBoxes, 20=keep best PprunMaxBoxes ranked by #instances inside a box,
+                    3x= as 20, but remove all boxes with x or less instances in it,
+                    100=keep best PprunMaxBoxes ranked by relThickness,
+                    200=keep best PprunMaxBoxes ranked by relVolume,
+                    300=keep best PprunMaxBoxes ranked by (lowest) classImpurity (computed from classData.classProbDistribution)"
+    },
+    "PprunMaxBoxes": {
+            "active": 1,
+            "fnAbr": "PprunMaxBoxes",
+            "flags": [1,1,1,1],
+            "init" : "600",
+            "condition": "x.treeType == \"mtc\" && x.Ek > 1",
+            "doc" : "mtc: Maximum number of boxes to be kept when pruning via RankedBoxes"
+    },
+    "Pmerg": {
+            "active": 1,
+            "fnAbr": "Pmerg",
+            "flags": [1,1,1,1],
+            "init" : "0",
+            "condition": "x.treeType == \"mtc\"",
+            "doc" : "mtc: Merging boxes via cubes.JoinAdjacentCubes; 0: no, 1: yes"
+    },
+    "Pgrow": {
+        "active": 1,
+        "fnAbr": "Pgrow",
+        "flags": [1,1,1,1],
+        "init" : "MIN_NUM_SPLITS",
+        "condition": "(x.treeType == \"tc\" || x.treeType == \"mtc\") && x.Pprun",
+        "doc" : "mtc: Tree growing - attribute selection strategy for finding the split dimension and splitpoint
+                when building a tree from a box collection."
+    },
+    "PprunDS": {
+            "active": 1,
+            "fnAbr": "PprunDS",
+            "flags": [1,1,1,1],
+            "init" : "SEPARATE_PRUNING_DATA",
+            "condition": "x.treeType == \"mtc\" && x.Ek > 1 && x.Pprun > 0",
+            "doc" : "mtc: The source of the pruning data: SEPARATE_PRUNING_DATA (=a part of data taken from training)
+                    or TRAINING_DATA (=same as training data i.e. double use of training data)"
+    },
+    "perAttBins": {
+        "active": 1,
+        "fnAbr": "tpr",
+        "flags": [0,0,1,0],
+        "init" : -1,
+        "doc" : "The cut points used in the discretizing step. [AA: Is this used at all, and where?]"
+    },
+    "Etf": {
+        "active": 1,
+        "fnAbr": "Etf",
+        "flags": [1,1,1,1],
+        "init" : "J48",
+        "condition": "x.treeType == \"tc\" || x.treeType == \"mtc\" || x.treeType == \"fcc\" || x.treeType == \"cd\"",
+        "doc" : "decision tree (J48) vs. random forests as initial models"
+    },
+    "Esim": {
+            "active" : 1,
+            "fnAbr": "Esim",
+            "flags": [1,1,1,1],
+            "init" : 0,
+            "condition": "x.Ek != 1 && (x.treeType == \"tc\" || x.treeType == \"mtc\" || x.treeType == \"fcc\" || x.treeType == \"opc\"|| x.treeType == \"vc\")",
+            "doc" : "degree of similarity between Di and Dj"
+    },
+    "EuseSameRandomSamples": {
+            "active" : 1,
+            "fnAbr": "Esim",
+            "flags": [1,1,1,1],
+            "init" : "false",
+            "condition": "x.Esim > 0",
+            "doc" : "use same samples for all Di"
+    },
+    "Eparallel": {
+        "active" : 1,
+        "fnAbr": "Eparallel",
+        "flags": [1,1,1,1],
+        "init" : 1,
+        "condition": "x.treeType == \"mtc\" || x.treeType == \"fcc\"",
+        "doc" : "Decides whether the algorithm shall be executed in parallel. 0 = unlimited, 1 = single threaded, n = n tasks concurrently"
+    },
+    "pctCorrect": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The percentage of instances correctly classified"
+    },
+    "pctIncorrect": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The percentage of instances incorrectly classified"
+    },
+    "pctUnclassified": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The percentage of instances not classified"
+    },
+    "precisionClass0": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "tp / (tp / fp)"
+    },
+    "recallClass0": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "tp / (tp + fn)"
+    },
+    "specificityClass0": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "tn / (tn + fp)"
+    },
+    "accuracyClass0": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "(tp + tn) / (tp + tn + fp + fn)"
+    },
+    "ROCAUCClass0": {
+        "active": 1,
+        "fnAbr": "roc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "ROC AUC for class 0"
+    },
+    "confusionMatrix": {
+        "active": 1,
+        "fnAbr": "tpr",
+        "flags": [0,0,1,0],
+        "init" : -1,
+        "doc" : "The confusion matrix"
+    },
+    "classifierBuildTime": {
+        "active": 1,
+        "fnAbr": "cbtl",
+        "flags": [0,0,1,0],
+        "init" : -1,
+        "doc" : "The wall-clock time elapsed while training the classifier"
+    },
+    "classifierBuildTimeMax": {
+        "active": 1,
+        "fnAbr": "cbtl",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The maximum wall-clock time elapsed while training the classifier"
+    },
+    "classifierBuildTimeAvg": {
+        "active": 1,
+        "fnAbr": "cbtl",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The average wall-clock time elapsed while training the classifier"
+    },
+    "classifierBuildPeakMemUsage": {
+        "active": 1,
+        "fnAbr": "cbtl",
+        "flags": [0,0,1,0],
+        "init" : -1,
+        "doc" : "The peak memory usage while training the classifier"
+    },
+    "classifierBuildPeakMemUsageMax": {
+        "active": 1,
+        "fnAbr": "cbtl",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The maximum peak memory usage while training the classifier"
+    },
+    "classifierBuildPeakMemUsageAvg": {
+        "active": 1,
+        "fnAbr": "cbtl",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The average peak memory usage while training the classifier"
+    },
+    "classifierClassificationTime": {
+        "active": 1,
+        "fnAbr": "cbtl",
+        "flags": [0,0,1,0],
+        "init" : -1,
+        "doc" : "The wall-clock time elapsed while letting the classifier classify the test instances"
+    },
+    "classifierClassificationTimeMax": {
+        "active": 1,
+        "fnAbr": "cbtl",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The maximum wall-clock time elapsed while letting the classifier classify the test instances"
+    },
+    "classifierClassificationTimeAvg": {
+        "active": 1,
+        "fnAbr": "cbtl",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The average wall-clock time elapsed while letting the classifier classify the test instances"
+    },
+    "classifierClassificationPeakMemUsage": {
+        "active": 1,
+        "fnAbr": "cbtl",
+        "flags": [0,0,1,0],
+        "init" : -1,
+        "doc" : "The peak memory usage while letting the classifier classify the test instances"
+    },
+    "classifierClassificationPeakMemUsageMax": {
+        "active": 1,
+        "fnAbr": "cbtl",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The maximum peak memory usage while letting the classifier classify the test instances"
+    },
+    "classifierClassificationPeakMemUsageAvg": {
+        "active": 1,
+        "fnAbr": "cbtl",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The average peak memory usage while letting the classifier classify the test instances"
+    },
+    "numClasses": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The number of classes in the data"
+    },
+    "numAttributes": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The number of attributes in the data"
+    },
+    "numInstances": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The number of instances in the data"
+    },
+    "conflictBoxes": {
+        "active": 1,
+        "fnAbr": "cb",
+        "flags": [0,1,1,0],
+        "init" : 0,
+        "doc" : "The number of conflict boxes for all merge permutations as matrix"
+    },
+    "mergedBoxesCount": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : 0,
+        "doc" : "The number of merged boxes"
+    },
+    "cubesBuilt": {
+        "active": 1,
+        "fnAbr": "tpr",
+        "flags": [0,0,1,0],
+        "init" : -1,
+        "doc" : "The number of cubes build from the instance splits"
+    },
+    "cubesBuiltMax": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The maximum of the number of cubes build from the instance splits"
+
+    },
+    "cubesBuiltAvg": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The average of the number of cubes build from the instance splits"
+    },
+    "cubeCountRatioAfterMerging": {
+        "active": 1,
+        "fnAbr": "tpr",
+        "flags": [0,0,1,0],
+        "init" : -1,
+        "doc" : "The change in the number of cubes after merging the instance splits"
+    },
+    "cubeCountRatioAfterMergingMax": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The maximum of the change in the number of cubes after merging the instance splits"
+    },
+    "cubeCountRatioAfterMergingAvg": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The average of the change in the number of cubes after merging the instance splits"
+    },
+    "cubeCompressionRatio": {
+        "active": 1,
+        "fnAbr": "tpr",
+        "flags": [0,0,1,0],
+        "init" : -1,
+        "doc" : "The change in the number of cubes after merging the instance splits"
+    },
+    "cubeCompressionRatioMax": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The maximum of the change in the number of cubes after merging the instance splits"
+    },
+    "cubeCompressionRatioAvg": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The average of the change in the number of cubes after merging the instance splits"
+    },
+    "finalCubeCount": {
+        "active": 1,
+        "fnAbr": "tpr",
+        "flags": [0,0,1,0],
+        "init" : -1,
+        "doc" : "The number of cubes before building the classifier tree"
+    },
+    "finalCubeCountMax": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The maximum number of cubes before building mtc final tree"
+    },
+    "finalCubeCountAvg": {
+        "active": 1,
+        "fnAbr": "mbc",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The average number of cubes before building mtc final tree"
+    },
+    "cutBoxesAtBuildTree": {
+        "active": 1,
+        "fnAbr": "cbbt",
+        "flags": [0,0,1,0],
+        "init" : -1,
+        "doc" : "The number of cubes cut when building mtc final tree"
+    },
+    "cutBoxesAtBuildTreeMax": {
+        "active": 1,
+        "fnAbr": "cbbtm",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The maximum number of cubes cut when building mtc final tree"
+    },
+    "cutBoxesAtBuildTreeAvg": {
+        "active": 1,
+        "fnAbr": "cbbta",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The average number of cubes cut when building mtc final tree"
+
+    },
+    "treeDepth": {
+        "active": 1,
+        "fnAbr": "cbbt",
+        "flags": [0,0,1,0],
+        "init" : -1,
+        "doc" : "Depth of the mtc final tree"
+    },
+    "treeDepthMax": {
+        "active": 1,
+        "fnAbr": "cbbtm",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The maximum depth of the mtc final tree"
+    },
+    "treeDepthAvg": {
+        "active": 1,
+        "fnAbr": "cbbta",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The average depth of the mtc final tree"
+    }
+},
+
+"Loops": {
+    "dataset": {
+        "test": "LetterRecognition.arff",
+         "cd" : {"list" : ["synthetic.arff", "cd_synthetic.arff"]},
+        "loop2": {"list": ["iris.arff", "segment-challenge.arff"]},
+        "allNoYast": {"list": ["Cardiotocography.arff", "OzoneLeveLDetection.arff", "PageBlocks.arff", "WallFollowingRobotNavigation.arff", "spambase.arff", "MAGICGammaTelescope.arff", "LetterRecognition.arff", "MiniBooNE_balanced.arff"]},
+        "all": {"list": ["yeast.arff", "Cardiotocography.arff", "OzoneLeveLDetection.arff", "PageBlocks.arff", "WallFollowingRobotNavigation.arff", "spambase.arff", "MAGICGammaTelescope.arff", "LetterRecognition.arff", "MiniBooNE_balanced.arff"]},
+        "allFast": {"list": ["yeast.arff", "Cardiotocography.arff", "OzoneLeveLDetection.arff", "PageBlocks.arff", "WallFollowingRobotNavigation.arff", "spambase.arff", "MAGICGammaTelescope.arff", "LetterRecognition.arff"]},
+        "loop3": {"list": ["iris.arff", "segment-challenge.arff", "spambase.arff"]},
+        "big":  "MiniBooNE_balanced.arff",
+        "wall": "WallFollowingRobotNavigation.arff",
+        "cardio": "Cardiotocography.arff",
+        "2DCircle": "2DdataCircleGSev1Sp1Train.arff",
+        "2DTest": "2DTest.arff",
+        "magic" : "MAGICGammaTelescope.arff",
+        "good" : {"list": ["Cardiotocography.arff", "WallFollowingRobotNavigation.arff", "spambase.arff", "MAGICGammaTelescope.arff", "LetterRecognition.arff", "MiniBooNE_balanced.arff"]},
+        "good123" : {"list": ["Cardiotocography.arff", "WallFollowingRobotNavigation.arff", "spambase.arff"]},
+        "good45" : {"list": ["MAGICGammaTelescope.arff", "LetterRecognition.arff"]},
+        "good-light" : {"list": ["Cardiotocography.arff", "WallFollowingRobotNavigation.arff", "spambase.arff", "MAGICGammaTelescope.arff", "LetterRecognition.arff"]}
+    },
+    "Ek": {
+        "test": 1,
+        "four": 4,
+        "1to4": { "list": [1, 2, 3, 4]},
+        "2to8": { "list": [2,4,8]},
+        "2to16": { "list": [2,4,8,16]},
+        "2to32": { "list": [2,4,8,16,32]},
+        "1to8": { "list": [1,2,4,8]},
+        "1to16": { "list": [1,2,4,8,16]},
+        "1to32": { "list": [1,2,4,8,16,32]},
+        "1to128": { "list": [1,2,4,8,16,32,64,128]},
+        "times4to16": { "list": [1,4,16]},
+        "times4to64": { "list": [1,4,16,64]},
+        "4to64": { "list": [4,16,64]},
+        "1to256": { "list": [1,2,4,8,16,32,64,128,256]}
+    },
+    "Eparallel": {
+        "test": 0,
+        "all": { "list": [0, 1, 16]}
+    },
+    "Esim": {
+        "test": { "list": [0.0, 0.2] },
+        "all": { "range": [0.0, 1.0, 0.2] }
+    },
+    "EuseSameRandomSamples": {
+        "all": { "list": ["false", "true"] }
+    },
+    "Pdisc": {
+        "all": { "list": ["0", "1", "2" ] },
+        "-10,0,2": { "list": ["-10", "0", "2" ] },
+        "allOrNothing" : { "list": [0, 2] }
+    },
+    "treeType": {
+        "all": { "list": ["j48", "rf", "tc", "mtc" ]},
+        "cd": { "list": ["cd"] },
+        "classic": { "list": ["j48", "rf"] },
+        "j48+rf+mtc" : { "list": ["j48", "rf", "mtc"] },
+        "j48+tc+mtc": { "list": ["j48", "tc", "mtc"] },
+        "tc+j48+mtc": { "list": ["tc", "j48", "mtc"] },
+        "tc+mtc": { "list": ["tc", "mtc"] },
+        "tc+vc": { "list": ["tc", "vc"] },
+        "j48+mtc": { "list": ["j48", "mtc"] },
+        "j48+opc": { "list": ["j48", "opc"] },
+        "opc+j48": { "list": ["opc", "j48"] },
+        "opc+rsc": { "list": ["rsc", "opc"] },
+        "opc+j48+vc": { "list": ["opc", "j48", "vc"] },
+        "opc+mtc+vc": { "list": ["opc", "mtc", "vc"] },
+        "mtc": { "list": ["mtc"] },
+        "vc": { "list": ["vc"] },
+        "test": { "list": ["fcc", "tc", "mtc"] }
+    },
+    "Pgrow": {
+        "minSplits": "MIN_NUM_SPLITS",
+        "all": { "list": ["MIN_NUM_SPLITS", "INFO_GAIN"] }
+    },
+    "Pconf": {
+        "a" : "a",
+        "a+b" : {"list":["a", "b"]},
+        "b+c" : {"list":["b", "c"]},
+        "b+d" : {"list":["b", "d"]},
+        "all" : {"list":["a", "b", "c", "d"]}
+    },
+    "Pprun": {
+        "all-old" : { "list": ["2", "1", "0"] },
+        "default" : "2",
+        "2+1" : { "list": ["2", "1"] },
+        "all-ranking" : { "list": ["30", "100", "200", "300"] },
+        "30+200" : { "list": ["30", "200"] },
+        "none" : "0"
+    },
+    "PprunMaxBoxes": {
+        "all" : { "list": ["100", "200", "400", "800"] },
+        "eval" : { "list": ["1000", "2000", "3000", "4000", "5000", "7500", "10000"] },
+        "min" : "100"
+    },
+    "PprunDS": {
+        "all": { "list": ["SEPARATE_PRUNING_DATA", "TRAINING_DATA"]},
+        "train": { "list": ["TRAINING_DATA"]}
+    },
+    "Pmerg": {
+        "none" : 0,
+        "maxOnly" : 2,
+        "all" : { "list": [0, 1, 2] },
+        "allOrNothing" : { "list": [0, 2] }
+    },
+    "Etf": {
+        "all": { "list": ["J48", "RandomForest"] }
+    },
+    "FinalClassif": {
+        "all": { "list": ["J48", "RandomForest"] },
+        "rf": { "list": ["RandomForest"] }
+    },
+    "NumFolds": {
+        "2folds": 2,
+        "4folds": 4,
+        "10folds": 10
+    },
+    "Ncentro": {
+        "0.1to0.8": { "list": [0.1, 0.2, 0.3, 0.4, 0.6, 0.8] },
+        "0.025to0.8": { "list": [0.025, 0.05, 0.075, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8] },
+        "0.01to0.8": { "list": [0.01, 0.1, 0.3, 0.5, 0.7, 0.8] },
+        "0.01to0.5": { "list": [0.01, 0.1, 0.3, 0.5] },
+        "100": "100",
+        "50to1000": { "list": [50, 100, 200, 300, 400, 600, 800, 1000] },
+        "50to2000": { "list": [50, 100, 200, 300, 400, 600, 800, 1000, 1500, 2000] }
+    },
+    "MS": {
+        "all": { "list": ["Linear", "DAC"] }
+    },
+    "SumStra": {
+        "all": { "list": ["Distance", "Greedy"] }
+    }
+},
+
+
+
+"Batches": {
+
+    "conceptDrift" : {
+        "doc" : "Concept-Drift experiments",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile" : false },
+        "loopsCombination" : {
+            "dataset" : "iris.arff",
+            "Ek" : "2to8",
+            "Pdisc" : "all",
+            "treeType" : "cd",
+            "Pconf" : "a",
+            "Pgrow" : "minSplits",
+            "Pprun" : "default",
+            "NumFolds" : "10",
+            "Etf" : "J48",
+            "Eparallel" : "test"
+        }
+    },
+    "testBatchMarch2012" : {
+        "doc" : "Profiling TreeNode - March 2012",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile": false },
+         "loopsCombination": {
+            "dataset": "cardio",
+            "Ek": "1to16",
+            "Pdisc": "2",
+            "treeType": "tc+mtc",
+            "Pconf": "d",
+            "Pgrow": "minSplits",
+            "Pprun": "default",
+            "PprunMaxBoxes": "min",
+            "PprunDS": "all",
+            "Pmerg": "0",
+            "NumFolds": "4",
+            "Etf": "J48",
+            "Eparallel": "test"
+         }
+    },
+    "fastTestA" : {
+        "doc" : "Fast test - 09.02.2012 at 0:15",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile": false },
+         "loopsCombination": {
+            "dataset": "all",
+            "Ek": "1to4",
+            "Esim": "test",
+            "EuseSameRandomSamples": "all",
+            "treeType": "all",
+            "Pgrow": "minSplits",
+            "Pconf": "test",
+            "Pprun": "test",
+            "Pdisc": "all",
+            "Pmerg": "maxOnly",
+            "Etf": "J48"
+         }
+    },
+    "big-pruning-comparison-A" : {
+        "doc" : "Large comparison of results for different pruning strategies (7.07.2012)",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile": false },
+         "loopsCombination": {
+            "Ek": "2to16",
+            "Pconf": "b+c",
+            "PprunMaxBoxes": "600",
+            "Pprun": "all-ranking",
+            "treeType": "tc+j48+mtc",
+            "dataset": "all",
+            "Pdisc": "2",
+            "Pgrow": "minSplits",
+            "PprunDS": "train",
+            "Pmerg": "0",
+            "NumFolds": "10",
+            "Etf": "J48",
+            "Eparallel": "test"
+         }
+    },
+    "testVoting" : {
+        "doc" : "Comparing voting classifiers - tc vs. vc, various discretisation modes",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile": false },
+         "loopsCombination": {
+            "Ncentro" : "0.025to0.8",
+            "Ek": "1to32",
+            "Pdisc": "0",
+            "treeType": "vc",
+            "dataset": "allFast",
+            "NumFolds": "2",
+            "FinalClassif": "all"
+         }
+    },
+    "onePass-big" : {
+        "doc" : "One-Pass classification experiments with many parameter variations",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile" : false },
+        "loopsCombination" : {
+            "Ek": "1to256",
+            "Ncentro" : "0.025to0.8",
+            "MS" : "all",
+            "Pdisc" : "-10,0,2",
+            "dataset" : "allFast",
+            "treeType" : "opc+j48+vc",
+            "NumFolds" : "10",
+            "FinalClassif": "all"
+        }
+    },
+    "onePass" : {
+        "doc" : "One-Pass classification experiments with many parameter variations",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile" : false },
+        "loopsCombination" : {
+            "Ek": "2",
+            "Ncentro" : "0.01",
+            "MS" : "DAC",
+            "dataset" : "MAGICGammaTelescope.arff",
+            "treeType" : "opc",
+            "NumFolds" : "2",
+            "Pdisc" : "0",
+            "FinalClassif" : "all",
+            "SumStra" : "all"
+        }
+    },
+    "testBatch" : {
+        "doc" : "Debugging MergedTreeClassifier and new pruning (by box importance)",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile": false },
+         "loopsCombination": {
+            "dataset": "cardio",
+            "Ek": "1to8",
+            "Pdisc": "1",
+            "treeType": "mtc",
+            "Pconf": "b",
+            "Pgrow": "minSplits",
+            "Pprun": "all-ranking",
+            "PprunMaxBoxes": "400",
+            "PprunDS": "train",
+            "Pmerg": "2",
+            "NumFolds": "10",
+            "Etf": "J48",
+            "Eparallel": "1"
+         }
+    },
+    "batchMTCPruning" : {
+        "doc" : "MergedTreeClassifier pruning strategy influence experiments",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile": false },
+         "loopsCombination": {
+            "dataset": "good",
+            "Ek": "2to8",
+            "Pdisc": "-10,0,2",
+            "treeType": "mtc",
+            "Pconf": "b+c",
+            "Pgrow": "minSplits",
+            "Pprun": "30+200",
+            "PprunMaxBoxes": "400",
+            "PprunDS": "train",
+            "Pmerg": "0",
+            "NumFolds": "2",
+            "Etf": "J48",
+            "Eparallel": "test"
+         }
+    },
+    "batchBoxExplosion" : {
+        "doc" : "Experiment to gather box explosion details.",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile" : false },
+        "loopsCombination" : {
+            "dataset" : "MAGICGammaTelescope.arff",
+            "Ek": "8",
+            "treeType" : "mtc",
+            "NumFolds" : "10",
+            "Pdisc" : "0",
+            "Pconf": "c",
+            "Pprun": "30",
+            "PprunMaxBoxes": "1000",
+            "Pmerg": "maxOnly",
+            "FinalClassif" : "J48"
+        }
+    },
+    "batchOnePass-3" : {
+        "doc" : "One-Pass classification experiments",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile" : false },
+        "loopsCombination" : {
+            "dataset" : "big",
+            "MS" : "DAC",
+            "Ek": "64",
+            "Ncentro" : "0.8",
+            "treeType" : "mtc",
+            "NumFolds" : "10",
+            "Pdisc" : "0",
+            "Pconf": "b",
+            "Pprun": "200",
+            "PprunMaxBoxes": "1000",
+            "FinalClassif" : "J48",
+            "SumStra": "Distance"
+        }
+    },
+    "batchOnePass-2" : {
+        "doc" : "One-Pass classification experiments",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile" : false },
+        "loopsCombination" : {
+            "dataset" : "big",
+            "MS" : "DAC",
+            "Ek": "64",
+            "Ncentro" : "0.8",
+            "treeType" : "vc",
+            "NumFolds" : "10",
+            "Pdisc" : "0",
+            "Pconf": "c",
+            "Pprun": "30",
+            "PprunMaxBoxes": "1000",
+            "FinalClassif" : "J48",
+            "SumStra": "Distance"
+        }
+    },
+    "batchOnePass-Ncentro0.5" : {
+        "doc" : "One-Pass classification experiments",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile" : false },
+        "loopsCombination" : {
+            "dataset" : "big",
+            "MS" : "DAC",
+            "Ek": "times4to64",
+            "Ncentro" : "0.5",
+            "treeType" : "opc",
+            "NumFolds" : "10",
+            "Pdisc" : "0",
+            "Pconf": "c",
+            "Pprun": "30",
+            "PprunMaxBoxes": "1000",
+            "FinalClassif" : "J48",
+            "SumStra": "Greedy"
+        }
+    },
+    "batchVCrfVCj48" : {
+        "doc" : "Check which of those performs better during ideal conditions.",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile": false },
+        "loopsCombination": {
+            "dataset": "good",
+            "Ek": "1to32",
+            "Pdisc": "-10,0,2",
+            "treeType": "vc",
+            "NumFolds": "2",
+            "FinalClassif": "all"
+        }
+    },
+    "batch23" : {
+        "doc" : "Experiments to answer the questions 2 and 3.",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile": false },
+        "loopsCombination": {
+            "dataset": "good",
+            "Ek": "16",
+            "Pdisc": "0",
+            "treeType": "opc+rsc",
+            "NumFolds": "10",
+            "SumStra": "all",
+            "MS" : "DAC",
+            "Ncentro": "0.01to0.5",
+            "FinalClassif": "J48"
+        }
+    },
+    "batch8" : {
+        "doc" : "Experiments to answer the question 8.",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile": false },
+        "loopsCombination": {
+            "dataset": "",
+            "Ek": "10",
+            "Pdisc": "0",
+            "treeType": "opc",
+            "NumFolds": "10",
+            "SumStra": "all",
+            "MS" : "DAC",
+            "Ncentro": "10000",
+            "FinalClassif": "J48"
+        }
+    },
+    "batch23vc" : {
+        "doc" : "Experiments to get baseline for questions 2,3.",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile": false },
+        "loopsCombination": {
+            "dataset": "good",
+            "Ek": "times4to16",
+            "Pdisc": "0",
+            "treeType": "vc",
+            "NumFolds": "10",
+            "FinalClassif": "J48"
+        }
+    },
+    "batch45Pdisc-10" : {
+        "doc" : "Experiments to answer the questions 4 and 5.",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile" : false },
+        "loopsCombination" : {
+            "dataset" : "good-light",
+            "Ek": "4",
+            "treeType" : "mtc",
+            "NumFolds" : "10",
+            "Pdisc" : "-10",
+            "Pconf": "c",
+            "Pprun": "30",
+            "PprunMaxBoxes": "eval",
+            "FinalClassif" : "J48"
+        }
+    },
+    "batch45Pdisc2" : {
+        "doc" : "Experiments to answer the questions 4 and 5.",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile" : false },
+        "loopsCombination" : {
+            "dataset" : "good-light",
+            "Ek": "4",
+            "treeType" : "mtc",
+            "NumFolds" : "10",
+            "Pdisc" : "2",
+            "Pconf": "c",
+            "Pprun": "30",
+            "PprunMaxBoxes": "eval",
+            "FinalClassif" : "J48"
+        }
+    },
+    "batch45-1" : {
+        "doc" : "Experiments to answer the questions 4 and 5.",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile" : false },
+        "loopsCombination" : {
+            "dataset" : "good",
+            "Ek": "1",
+            "treeType" : "mtc",
+            "NumFolds" : "10",
+            "Pdisc" : "0",
+            "Pconf": "c",
+            "Pprun": "30",
+            "PprunMaxBoxes": "eval",
+            "FinalClassif" : "J48"
+        }
+    },
+    "batch6" : {
+        "doc" : "Experiments to answer the questions 6.",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile" : false },
+        "loopsCombination" : {
+            "dataset" : "good123",
+            "Ek": "4",
+            "treeType" : "mtc",
+            "NumFolds" : "10",
+            "Pdisc" : "0",
+            "Pconf": "b",
+            "Pprun": "200",
+            "PprunMaxBoxes": "eval",
+            "FinalClassif" : "J48"
+        }
+    },
+    "batch45-3" : {
+        "doc" : "Experiments to answer the questions 4 and 5.",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile" : false },
+        "loopsCombination" : {
+            "dataset" : "good-light",
+            "Ek": "4",
+            "treeType" : "mtc",
+            "NumFolds" : "10",
+            "Pdisc" : "0",
+            "Pconf": "c",
+            "Pprun": "30",
+            "PprunMaxBoxes": "800",
+            "FinalClassif" : "J48"
+        }
+    },
+    "batchBaseline" : {
+        "doc" : "Experiment to calculate the baseline.",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile" : false },
+        "loopsCombination" : {
+            "dataset" : "good",
+            "Ek": "1",
+            "Pdisc" : "-10,0,2",
+            "treeType" : "classic",
+            "NumFolds" : "10",
+            "FinalClassif" : "J48"
+        }
+    },
+    "batchTMM" : {
+        "doc" : "Experiments for perf test (second try of the paper).",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile" : false },
+        "loopsCombination" : {
+            "dataset" : "good-light",
+            "Ek": "4to64",
+            "treeType" : "mtc",
+            "NumFolds" : "10",
+            "Pdisc" : "0",
+            "Pconf": "c",
+            "Pprun": "30",
+            "PprunMaxBoxes": "eval",
+            "FinalClassif" : "J48",
+            "Pmerg": "2"
+        }
+    } ,
+    "batchTMO" : {
+        "doc" : "Experiments for perf test (second try of the paper).",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile" : false },
+        "loopsCombination" : {
+            "dataset" : "good-light",
+            "Ek": "4to64",
+            "treeType" : "mtc",
+            "NumFolds" : "10",
+            "Pdisc" : "0",
+            "Pconf": "b",
+            "Pprun": "200",
+            "PprunMaxBoxes": "eval",
+            "FinalClassif" : "J48",
+            "Pmerg": "0"
+        }
+    },
+    "batchTMO_MiniBoo" : {
+        "doc" : "Experiments for perf test (second try of the paper).",
+        "ExperimentCodeClass" : "experiment.ExpAllCode",
+        "filterClass" : "",
+        "settings" : { "saveToFile" : false },
+        "loopsCombination" : {
+            "dataset" : "MiniBooNE_balanced.arff",
+            "Ek": "4to64",
+            "treeType" : "mtc",
+            "NumFolds" : "10",
+            "Pdisc" : "0",
+            "Pconf": "b",
+            "Pprun": "200",
+            "PprunMaxBoxes": "eval",
+            "FinalClassif" : "J48",
+            "Pmerg": "0"
+        }
+    }
+}
+}

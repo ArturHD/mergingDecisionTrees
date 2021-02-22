@@ -1,0 +1,67 @@
+{
+"ParamInfos": {
+    "traceIndex": {
+        "active" : 1,
+        "fnAbr": "tr",
+        "flags": [1,1,1,1],
+        "init" : 0,
+        "doc" : "Index of the input trace"
+    },
+    "targetColumnIndex": {
+        "active" : 1,
+        "fnAbr": "target",
+        "flags": [1,1,1,1],
+        "init" : 1,
+        "doc" : "Index of trace col to be predicted"
+    },
+    "preprocType": {
+        "active" : 1,
+        "fnAbr": "pproc",
+        "flags": [1,1,1,1],
+        "init" : 1,
+        "doc" : "Type of the preprocessor"
+    },
+    "Output_pctCorrect": {
+        "active": 1,
+        "fnAbr": "pctCor",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The percentage of instances correctly classified"
+
+    },
+    "Output_pctIncorrect": {
+        "active": 1,
+        "fnAbr": "pctIncor",
+        "flags": [0,1,1,0],
+        "init" : -1,
+        "doc" : "The percentage of instances incorrectly classified"
+
+    }
+},
+
+"Loops": {
+    "traceIndex": {
+        "test": [0,1,2,3],
+        "const": 0,
+        "test2": {"list": [0, 1, 2, 3]},
+        "all": {"range": [0, 40, 1]}
+    },
+    "targetColumnIndex": {
+        "all": { "range": [0, 50, 1] }
+    }
+},
+
+
+"Batches": {
+    "basicBatch" : {
+        "doc" : "We do what it takes",
+        "ExperimentCodeClass" : "edu.pvs.batchrunner.ExperimentCodeTest",
+        "filterClass" : "",
+        "settings" : { "bla": 0 },
+         "loopsCombination": {
+            "traceIndex": "all",
+            "targetColumnIndex": "all"
+         }
+    }
+}
+}

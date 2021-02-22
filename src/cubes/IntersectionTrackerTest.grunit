@@ -1,0 +1,22 @@
+import cubes.ClassCube
+import cubes.Cube
+import cubes.IntersectionTracker
+
+def cubeA = new ClassCube(1)
+cubeA.setClassValue(1)
+def cubeB = new ClassCube(1)
+cubeB.setClassValue(2)
+def cubeC = new ClassCube(1)
+cubeC.setClassValue(3)
+def cubeD = new ClassCube(1)
+cubeD.setClassValue(4)
+def cubeE = new ClassCube(1)
+cubeE.setClassValue(5)
+
+def it = new IntersectionTracker([cubeA, cubeB] as Set,[cubeC, cubeD, cubeE] as Set)
+it.addUnbounded(cubeA, 0)
+it.addBoundedIntersection(cubeB, cubeC)
+it.addUnbounded(cubeD, 1)
+
+def pairs = it.getPairsAboveOrEqualToIntersectionThreshold(1)
+assert pairs == [new Pair<Cube, Cube>(cubeA, cubeC), new Pair<Cube, Cube>(cubeA, cubeD), new Pair<Cube, Cube>(cubeB, cubeC), new Pair<Cube, Cube>(cubeB, cubeD), new Pair<Cube, Cube>(cubeA, cubeE)] as Set

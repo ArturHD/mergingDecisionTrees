@@ -1,0 +1,1271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7224e92f-3622-4d0a-a531-6aecbb1cbc3c" name="Default" comment="-rei" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Compare Directories">
+    <option name="identicalVisible" value="true" />
+    <option name="differentVisible" value="true" />
+    <option name="differentInBlanksVisible" value="true" />
+    <option name="differentNonSignificantVisible" value="true" />
+    <option name="leftOnlyVisible" value="true" />
+    <option name="rightOnlyVisible" value="true" />
+    <option name="mostProbablyIdenticalVisible" value="true" />
+    <option name="probablyIdenticalLeftNewerVisible" value="true" />
+    <option name="probablyIdenticalRightNewerVisible" value="true" />
+    <option name="probablyDifferentLeftNewerVisible" value="true" />
+    <option name="probablyDifferentRightNewerVisible" value="true" />
+    <option name="javaStructureVisible" value="false" />
+    <option name="autoExcludeHidden" value="false" />
+    <option name="autoScrollFromSource" value="false" />
+    <option name="lastLeftPaths">
+      <value len="0" />
+    </option>
+    <option name="lastRightPaths">
+      <value len="0" />
+    </option>
+    <option name="ignoredFileMasks">
+      <value len="0" />
+    </option>
+    <option name="exportFileName" value="CompareDirectories.txt" />
+    <option name="allowedDiffMasks">
+      <value len="0" />
+    </option>
+    <option name="diffsInCommentsNonSignificant" value="false" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="C:\Artur\Academic\Scheduling\trees" />
+  </component>
+  <component name="DebuggerManager">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
+      <breakpoint url="file://$PROJECT_DIR$/../batchrunner/src/test/groovy/edu/pvs/batchrunner/TestBatchRunner.groovy" line="23" class="TestBatchRunner.groovy" package="">
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="&#13;&#13;Groovy" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;Groovy" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/classifiers/mapreduce/MergedTreeClassifierReducer.groovy" line="112" class="classifiers.mapreduce.MergedTreeClassifierReducer" package="classifiers.mapreduce">
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="&#13;&#13;Groovy" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;Groovy" />
+      </breakpoint>
+    </line_breakpoints>
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
+    <field_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/cubes/Cube.groovy" line="16" class="cubes.Cube" package="cubes" field_name="nDims">
+        <option name="WATCH_MODIFICATION" value="true" />
+        <option name="WATCH_ACCESS" value="false" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="true" />
+        <option name="CONDITION" value="&#13;&#13;Groovy" />
+        <instance_id>
+          <option name="PATTERN" value="1979" />
+          <option name="ENABLED" value="true" />
+        </instance_id>
+        <option name="LOG_MESSAGE" value="&#13;&#13;Groovy" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/cubes/ClassCube.groovy" line="13" class="cubes.ClassCube" package="cubes" field_name="classData">
+        <option name="WATCH_MODIFICATION" value="true" />
+        <option name="WATCH_ACCESS" value="false" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="true" />
+        <option name="CONDITION" value="&#13;&#13;Groovy" />
+        <instance_id>
+          <option name="PATTERN" value="1979" />
+          <option name="ENABLED" value="true" />
+        </instance_id>
+        <option name="LOG_MESSAGE" value="&#13;&#13;Groovy" />
+      </breakpoint>
+    </field_breakpoints>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="trees">
+      <favorite_root url="file://$PROJECT_DIR$/src/WekaGroovyExamples/UsingJ48.groovy" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/src/weka/classifiers/trees/j48/ClassifierTree.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/src/weka/classifiers/trees/J48.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="weka.classifiers.trees.j48.J48toCubes" module="trees" type="class" klass="com.intellij.ide.favoritesTreeView.smartPointerPsiNodes.ClassSmartPointerNode" />
+      <favorite_root url="cubes.Cube" module="trees" type="class" klass="com.intellij.ide.favoritesTreeView.smartPointerPsiNodes.ClassSmartPointerNode" />
+    </favorites_list>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/classifiers/onepass/AuxiliaryDataRepresentation.groovy" />
+        <option value="$PROJECT_DIR$/src/classifiers/onepass/DatasetSummaryMerger.groovy" />
+        <option value="$PROJECT_DIR$/src/classifiers/VotingClassifier.groovy" />
+        <option value="$PROJECT_DIR$/src/experiment/Tools.groovy" />
+        <option value="$PROJECT_DIR$/../batchrunner/src/test/groovy/edu/pvs/batchrunner/TestBatchRunner.groovy" />
+        <option value="$PROJECT_DIR$/../batchrunner/src/main/groovy/edu/pvs/batchrunner/BatchConfigurator.groovy" />
+        <option value="$PROJECT_DIR$/../batchrunner/src/main/groovy/edu/pvs/batchrunner/ExperimentResult.groovy" />
+        <option value="$PROJECT_DIR$/../batchrunner/src/main/groovy/edu/pvs/batchrunner/BatchExecutor.groovy" />
+        <option value="$PROJECT_DIR$/../batchrunner/src/main/groovy/edu/pvs/batchrunner/util/ListRangeIterable.groovy" />
+        <option value="$PROJECT_DIR$/../batchrunner/src/main/groovy/edu/pvs/batchrunner/ConditionFilter.groovy" />
+        <option value="$PROJECT_DIR$/src/cubes/Cube.groovy" />
+        <option value="$PROJECT_DIR$/src/classifiers/MergedTreeClassifier.groovy" />
+        <option value="$PROJECT_DIR$/src/cubes/JoinAdjacentCubes.groovy" />
+        <option value="$PROJECT_DIR$/src/classifiers/mapreduce/MergedTreeClassifierReducer.groovy" />
+        <option value="$PROJECT_DIR$/src/config/expAll-01.json" />
+        <option value="$PROJECT_DIR$/src/cubes/ClassCube.groovy" />
+      </list>
+    </option>
+  </component>
+  <component name="KotlinMultiplatform">
+    <allAvailableExecutables />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="msuuoknx" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="keepSourceFolders" value="false" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Batch Runner" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.7" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1920" />
+    <option name="width" value="1431" />
+    <option name="height" value="1200" />
+  </component>
+  <component name="ProjectId" id="1oqFhuGj3pth15tGsVsCYg8gEWD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectStructureProblems">
+    <ignored-problems>
+      <problem id="library-invalid-classes-path(library:project:Maven: junit:junit:4.8.1)" />
+    </ignored-problems>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers ProjectPane="true" />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trees" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trees" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batchrunner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trees" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batchrunner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trees" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batchrunner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trees" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batchrunner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="groovy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="edu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pvs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="batchrunner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trees" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="compactDirectories" value="true" />
+    <option name="flattenModules" value="true" />
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path" value="C:\Artur\Academic\Scheduling\lib" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder5" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="151" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="165" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="165" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="38" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="166" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="664" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="142" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="141" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="142" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="141" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="142" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth5" value="641" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/batchrunner/src" />
+    <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.1367989" />
+    <property name="project.structure.side.proportion" value="0.37597913" />
+    <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="experiment" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Artur\Academic\Scheduling\batchrunner\doc" />
+      <recent name="C:\Artur\Academic\Scheduling\trees\src\experiment" />
+      <recent name="C:\Artur\Academic\Scheduling\trees\src\config" />
+      <recent name="C:\Artur\Academic\Scheduling\trees\src" />
+    </key>
+    <key name="GrIntroduceConstantDialog.RECENTS_KEY">
+      <recent name="cubes.ClassData" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="cubes" />
+      <recent name="experiment" />
+      <recent name="classifiers.mapreduce" />
+      <recent name="classifiers" />
+      <recent name="trees" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Visualization">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+    <configuration name="Visualization" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="experiment.Visualization" />
+      <module name="trees" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BoxMergingTest" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="trees" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/experiment/BoxMergingTest.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/experiment" />
+      <setting name="debug" value="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CubeIntersectionFinderTest" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="trees" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/cubes/CubeIntersectionFinderTest.grunit" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/cubes" />
+      <setting name="debug" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CubeTest" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="trees" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/cubes/CubeTest.grunit" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/cubes" />
+      <setting name="debug" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntersectionTrackerTest" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="trees" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/cubes/IntersectionTrackerTest.grunit" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/src/cubes" />
+      <setting name="debug" value="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestBatchRunner" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="batchrunner" />
+      <setting name="path" value="file://$PROJECT_DIR$/../batchrunner/src/test/groovy/edu/pvs/batchrunner/TestBatchRunner.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/../batchrunner/src/test/resources" />
+      <setting name="debug" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsingJ48Ext" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="trees" />
+      <setting name="path" value="file://$PROJECT_DIR$/src/WekaGroovyExamples/UsingJ48Ext.groovy" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="data/arff/iris.arff" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$/../../../Academic/Scheduling/trees" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in trees" type="JUnit" factoryName="JUnit">
+      <module name="trees" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BoxSetTest.testTreeNode" type="JUnit" factoryName="JUnit">
+      <module name="trees" />
+      <option name="PACKAGE_NAME" value="cubes" />
+      <option name="MAIN_CLASS_NAME" value="cubes.BoxSetTest" />
+      <option name="METHOD_NAME" value="testTreeNode" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MergedTreeClassifierTest" type="JUnit" factoryName="JUnit">
+      <module name="trees" />
+      <option name="PACKAGE_NAME" value="classifiers" />
+      <option name="MAIN_CLASS_NAME" value="classifiers.MergedTreeClassifierTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="NimRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="nim.task.build.to.cache" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Visualization" />
+      <item itemvalue="Groovy.ExpAll batchTMM" />
+      <item itemvalue="Groovy.ExpAll batchTMO" />
+      <item itemvalue="Groovy.ExpAll batchTMO MiniBoo" />
+      <item itemvalue="Groovy.ExpAll big-pruning-A" />
+      <item itemvalue="Groovy.ExpAll onePass" />
+      <item itemvalue="Groovy.ExpAll onePass-big" />
+      <item itemvalue="Groovy.ExpAll testBatch" />
+      <item itemvalue="Groovy.ExpAll testVoting" />
+      <item itemvalue="Groovy.BoxMergingTest" />
+      <item itemvalue="Groovy.CubeIntersectionFinderTest" />
+      <item itemvalue="Groovy.CubeTest" />
+      <item itemvalue="Groovy.IntersectionTrackerTest" />
+      <item itemvalue="Groovy.TestBatchRunner" />
+      <item itemvalue="Groovy.UsingJ48Ext" />
+      <item itemvalue="JUnit.cubes in trees" />
+      <item itemvalue="JUnit.BoxSetTest" />
+      <item itemvalue="JUnit.MergedTreeClassifierTest" />
+      <item itemvalue="JUnit.All in trees" />
+      <item itemvalue="JUnit.BoxSetTest.testTreeNode" />
+    </list>
+  </component>
+  <component name="SQLPlugin.ProjectConfiguration">
+    <queries />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value="SHOW_INHERITED,ALPHA_COMPARATOR" />
+  </component>
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="true">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="true">C:\Users\artur\AppData\Roaming\Subversion</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Artur\Academic\Scheduling\batchrunner" />
+          <option name="myCopyRoot" value="C:\Artur\Academic\Scheduling\batchrunner" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Artur\Academic\Scheduling\trees" />
+          <option name="myCopyRoot" value="C:\Artur\Academic\Scheduling\trees" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Artur\Academic\Scheduling\batchrunner" />
+          <option name="myCopyRoot" value="C:\Artur\Academic\Scheduling\batchrunner" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Artur\Academic\Scheduling\trees" />
+          <option name="myCopyRoot" value="C:\Artur\Academic\Scheduling\trees" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7224e92f-3622-4d0a-a531-6aecbb1cbc3c" name="Default" comment="" />
+      <created>1326582751751</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1326582751751</updated>
+    </task>
+    <task id="LOCAL-00001" summary="- moved files into packages according to function&#10;- renamed some files to make function more clear&#10;- added comments to important classes&#10;- lot of small refactorings (e.g. also typed getters from ExperimentResult.groovy) but no real functional changes">
+      <created>1339872788109</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1339872788109</updated>
+    </task>
+    <task id="LOCAL-00002" summary="- fixed refactoring problem">
+      <created>1339873144100</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1339873144100</updated>
+    </task>
+    <task id="LOCAL-00003" summary="- prepared TreeFromBoxesBuilder for &quot;RankedBoxes&quot;-Pruning">
+      <created>1339882913100</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1339882913100</updated>
+    </task>
+    <task id="LOCAL-00004" summary="- dummy implementation of RankedBoxesPruning (with new BR parameter for max number of boxes after pre-pruning)&#10;- prepared NodeModel and TreeFromBoxesBuilder for &quot;non-complete&quot; coverage of space">
+      <created>1339964697152</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1339964697152</updated>
+    </task>
+    <task id="LOCAL-00005" summary="- initial version of RankedBoxesPruning (based on #instances covered per box) is working (and pretty well!)&#10;- todo: more efficient counting of instances per box (and where to put it)&#10;- todo: more complex criteria, like taking all boxes with &gt;k of instances inside (e.g. via negative values of DprunMaxBoxes etc.)&#10;- todo: implement other strategies for ranking boxes, like relative volume, rel. thickness">
+      <created>1339972356100</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1339972356100</updated>
+    </task>
+    <task id="LOCAL-00006" summary="- introduced ranked pruning by box coverage which also removes boxes with &lt;= k instances inside (Pprun == 30)">
+      <created>1340483682179</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1340483682179</updated>
+    </task>
+    <task id="LOCAL-00007" summary="- unfinished version for computing bounding box of a &quot;box collection&quot; from instances &#10;todo: check - some dimensions in the bounding box have entries [0,0] - unused attributes?">
+      <created>1340538619108</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1340538619108</updated>
+    </task>
+    <task id="LOCAL-00008" summary="- Intermediate version of introducing BoxSet instead of Collection&lt;ClassCubes&gt;: this compiles&#10;- todo: make mergingBoxSetsViaIntersections consider bounding boxes&#10;- todo: move all code from CubeContainer to BoxSet and replace instantiations">
+      <created>1340718860133</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1340718860133</updated>
+    </task>
+    <task id="LOCAL-00009" summary="- Intermediate version of introducing BoxSet instead of Collection&lt;ClassCubes&gt;: this compiles&#10;&#10;- todo next: make CubeContainer in mergeBoxSets ... get always BoxSets with correctly set bounding boxes (probably by updating a result from tree building)&#10;&#10;- todo: move all code from CubeContainer to BoxSet and replace instantiations">
+      <created>1340727385115</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1340727385115</updated>
+    </task>
+    <task id="LOCAL-00010" summary="- replaced all CubeContainer usages by BoxSet  &#10;&#10;- todo next: make mergeBoxSets ... in BoxSet in  get always BoxSets with correctly set bounding boxes (probably by updating a result from tree building)&#10;&#10;">
+      <created>1341090831104</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1341090831104</updated>
+    </task>
+    <task id="LOCAL-00011" summary="&#10;Finished: mergeBoxSets ... in BoxSet always gets BoxSets with correctly set bounding boxes, i.e. propagation of bounding box is correct&#10;&#10;">
+      <created>1341096775100</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1341096775100</updated>
+    </task>
+    <task id="LOCAL-00012" summary="- Tree pruning by relVolume and relThickness seems to work (but gives poor results)">
+      <created>1341523884125</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1341523884125</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Updated documentation and examples">
+      <created>1341582878127</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1341582878127</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Updated experiment configuration for &quot;big&quot; pruning comparison&#10;">
+      <created>1341690174103</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1341690174103</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Updated experiment configuration for &quot;big&quot; pruning comparison&#10;">
+      <created>1341693043100</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1341693043100</updated>
+    </task>
+    <task id="LOCAL-00016" summary="- Fixed problems from NaN-attribute values when computing the bounding box&#10;- Updated experiment configuration for &quot;big&quot; pruning comparison&#10;">
+      <created>1341695321100</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1341695321100</updated>
+    </task>
+    <task id="LOCAL-00017" summary="- Preparations for &quot;true&quot; discretization (yet commented out)">
+      <created>1341746323130</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1341746323130</updated>
+    </task>
+    <task id="LOCAL-00018" summary="- Implemented pruning via ranking by classDistribution impurity (Prun=300)&#10;- Small changes in json config file&#10;- Explanation in visuation">
+      <created>1341756787100</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1341756787100</updated>
+    </task>
+    <task id="LOCAL-00019" summary="- Reverted back to the per-fragment discretisation&#10;">
+      <created>1342189117314</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1342189117314</updated>
+    </task>
+    <task id="LOCAL-00020" summary="- changes on one-pass-classifier:&#10;@Typed added, some names changed, perf optimizations">
+      <created>1342211346186</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1342211346186</updated>
+    </task>
+    <task id="LOCAL-00021" summary="-added comments in kSplit routine&#10;-config for opc-testing&#10;">
+      <created>1342302765205</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1342302765205</updated>
+    </task>
+    <task id="LOCAL-00022" summary="- extended parameter Ncentro so that values &lt;= 1.0 are treated as fraction of the # training instances">
+      <created>1342366508124</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1342366508124</updated>
+    </task>
+    <task id="LOCAL-00023" summary="- implemented VotingClassifier (vc)&#10;- added &quot;global&quot; discretisation for Pdisc==-10&#10;-added input parameter FinalClassif, for setting final classifier type for opc and vc&#10;- changed order of params in expAll-01.json&#10;-added batch setups">
+      <created>1342384831100</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1342384831100</updated>
+    </task>
+    <task id="LOCAL-00024" summary="- small optimizations in opc&#10;- new config for for onePass-big">
+      <created>1342535792224</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1342535792224</updated>
+    </task>
+    <task id="LOCAL-00025" summary="- initial check-in of matlab plot-files&#10;">
+      <created>1343158886102</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1343158886102</updated>
+    </task>
+    <task id="LOCAL-00026" summary="- size of a &quot;split&quot; (input per tree) in vc depends now on Ncentro">
+      <created>1343412473638</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1343412473638</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1920" y="0" width="1431" height="1200" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28851745" sideWeight="0.5855073" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39043063" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40250447" sideWeight="0.5126465" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33163264" sideWeight="0.4009662" order="5" side_tool="true" content_ui="tabs" x="-2039" y="-8" width="387" height="344" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38181818" sideWeight="0.0" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32932237" sideWeight="0.49680364" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20114942" sideWeight="0.49625468" order="1" side_tool="true" content_ui="tabs" x="-807" y="277" width="133" height="39" />
+      <window_info id="Maven Projects" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.49676824" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20114942" sideWeight="0.497191" order="0" side_tool="false" content_ui="combo" x="-801" y="277" width="121" height="39" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28325358" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="SQL" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Compare Directories" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45533141" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32775712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36502177" sideWeight="0.44382024" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3291866" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <MESSAGE value="- prepared TreeFromBoxesBuilder for &quot;RankedBoxes&quot;-Pruning" />
+    <MESSAGE value="- dummy implementation of RankedBoxesPruning (with new BR parameter for max number of boxes after pre-pruning)&#10;- prepared NodeModel and TreeFromBoxesBuilder for &quot;non-complete&quot; coverage of space" />
+    <MESSAGE value="- initial version of RankedBoxesPruning (based on #instances covered per box) is working (and pretty well!)&#10;- todo: more efficient counting of instances per box (and where to put it)&#10;- todo: more complex criteria, like taking all boxes with &gt;k of instances inside (e.g. via negative values of DprunMaxBoxes etc.)&#10;- todo: implement other strategies for ranking boxes, like relative volume, rel. thickness" />
+    <MESSAGE value="- introduced ranked pruning by box coverage which also removes boxes with &lt;= k instances inside (Pprun == 30)" />
+    <MESSAGE value="- unfinished version for computing bounding box of a &quot;box collection&quot; from instances &#10;todo: check - some dimensions in the bounding box have entries [0,0] - unused attributes?" />
+    <MESSAGE value="- Intermediate version of introducing BoxSet instead of Collection&lt;ClassCubes&gt;: this compiles&#10;- todo: make mergingBoxSetsViaIntersections consider bounding boxes&#10;- todo: move all code from CubeContainer to BoxSet and replace instantiations" />
+    <MESSAGE value="- Intermediate version of introducing BoxSet instead of Collection&lt;ClassCubes&gt;: this compiles&#10;&#10;- todo next: make CubeContainer in mergeBoxSets ... get always BoxSets with correctly set bounding boxes (probably by updating a result from tree building)&#10;&#10;- todo: move all code from CubeContainer to BoxSet and replace instantiations" />
+    <MESSAGE value="- replaced all CubeContainer usages by BoxSet  &#10;&#10;- todo next: make mergeBoxSets ... in BoxSet in  get always BoxSets with correctly set bounding boxes (probably by updating a result from tree building)&#10;&#10;" />
+    <MESSAGE value="&#10;Finished: mergeBoxSets ... in BoxSet always gets BoxSets with correctly set bounding boxes, i.e. propagation of bounding box is correct&#10;&#10;" />
+    <MESSAGE value="- Tree pruning by relVolume and relThickness seems to work (but gives poor results)" />
+    <MESSAGE value="Updated documentation and examples" />
+    <MESSAGE value="Updated experiment configuration for &quot;big&quot; pruning comparison&#10;" />
+    <MESSAGE value="- Fixed problems from NaN-attribute values when computing the bounding box&#10;- Updated experiment configuration for &quot;big&quot; pruning comparison&#10;" />
+    <MESSAGE value="- Preparations for &quot;true&quot; discretization (yet commented out)" />
+    <MESSAGE value="- Implemented pruning via ranking by classDistribution impurity (Prun=300)&#10;- Small changes in json config file&#10;- Explanation in visuation" />
+    <MESSAGE value="- Reverted back to the per-fragment discretisation&#10;" />
+    <MESSAGE value="- changes on one-pass-classifier:&#10;@Typed added, some names changed, perf optimizations" />
+    <MESSAGE value="-added comments in kSplit routine&#10;-config for opc-testing&#10;" />
+    <MESSAGE value="- extended parameter Ncentro so that values &lt;= 1.0 are treated as fraction of the # training instances" />
+    <MESSAGE value="- implemented VotingClassifier (vc)&#10;- added &quot;global&quot; discretisation for Pdisc==-10&#10;-added input parameter FinalClassif, for setting final classifier type for opc and vc&#10;- changed order of params in expAll-01.json&#10;-added batch setups" />
+    <MESSAGE value="- small optimizations in opc&#10;- new config for for onePass-big" />
+    <MESSAGE value="- initial check-in of matlab plot-files&#10;" />
+    <MESSAGE value="- size of a &quot;split&quot; (input per tree) in vc depends now on Ncentro" />
+    <MESSAGE value="- added detailed output on current step in MergedTreeClassifierReducer&#10;- various small changes" />
+    <MESSAGE value="-added configuration &quot;batchTMO_MiniBoo&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="-added configuration &quot;batchTMO_MiniBoo&quot;" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/classifiers/MergedTreeClassifier.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="245" column="63" selection-start="9103" selection-end="9125" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classifiers/mapreduce/MergedTreeClassifierReducer.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="110" selection-start="2059" selection-end="2059" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config/expAll-01.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="894" column="20" selection-start="30187" selection-end="30187" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../batchrunner/src/main/groovy/edu/pvs/batchrunner/ExperimentResult.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="6" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../batchrunner/src/main/java/edu/pvs/batchrunner/Filter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="17" selection-start="201" selection-end="201" vertical-scroll-proportion="0.11712598" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matlab/intersectCubes.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../batchrunner/src/main/java/edu/pvs/batchrunner/ExperimentCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="17" selection-start="239" selection-end="239" vertical-scroll-proportion="0.18405512" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../batchrunner/src/main/groovy/edu/pvs/batchrunner/BatchConfigurator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="4" selection-start="457" selection-end="457" vertical-scroll-proportion="0.01686508" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../batchrunner/src/main/groovy/edu/pvs/batchrunner/BatchExecutor.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.01686508" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/experiment/ExpAllCode.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="52" selection-start="3871" selection-end="3871" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/trees/TreeFromBoxesBuilder.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="65" selection-start="2993" selection-end="2993" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/experiment/ExpAllBatchrunner.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="56" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/experiment/BoxMergingTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cubes/JoinAdjacentCubes.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="0" selection-start="5627" selection-end="5627" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classifiers/mapreduce/MergedTreeClassifierMapper.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="6" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cubes/ClassCube.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="0" selection-start="1451" selection-end="1451" vertical-scroll-proportion="0.017293997">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.37597913" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.37597913" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>groovy-1.8.2+groovypp-0.9.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.37597913" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7 (2)</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.37597913" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>batchrunner</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.37597913" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: org.mbte.groovypp:groovypp:0.9.0_1.8.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.37597913" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+  <component name="simpleUML.UMLToolWindowPlugin">
+    <General>
+      <option name="birdViewUpdateDelay" value="2000" />
+      <option name="defaultFileLocation" value="file://$PROJECT_DIR$/.." />
+    </General>
+    <Classdiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="defaultFieldsExpanded" value="false" />
+      <option name="defaultContructorsExpanded" value="false" />
+      <option name="defaultMethodsExpanded" value="false" />
+      <option name="showParameters" value="true" />
+      <option name="showTooltip" value="true" />
+      <option name="showReturnValues" value="true" />
+      <option name="longModifier" value="true" />
+      <option name="implementsBehaviour" value="1" />
+      <option name="extendsBehaviour" value="1" />
+      <option name="compartmentBehaviour" value="1" />
+      <option name="interfaceBackgroundColor" value="-6494306" />
+      <option name="abstractClassBackgroundColor" value="-1580132" />
+      <option name="classBackgroundColor" value="-6508057" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="quickSourceLinkColor" value="-16776961" />
+      <option name="quickDiagramLinkColor" value="-8454144" />
+      <option name="drawDecorations" value="false" />
+      <option name="hideFieldList" value="" />
+      <option name="showFieldList" value="" />
+      <option name="hideConstructorList" value="" />
+      <option name="showConstructorList" value="" />
+      <option name="hideMethodList" value="" />
+      <option name="showMethodList" value="" />
+      <option name="minimumFigureSize" value="0,0" />
+    </Classdiagram>
+    <Dependencydiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="0" />
+    </Dependencydiagram>
+    <Packagediagram>
+      <option name="diagramTitleFont" value="SansSerif,0,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="packageBackgroundColor" value="-4144960" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="2" />
+    </Packagediagram>
+  </component>
+</project>
